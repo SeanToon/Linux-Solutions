@@ -1,0 +1,6 @@
+Your team lead asks you to create a configuration file named app.conf inside 
+/home/project/app/config/ and then add a few lines of text specifying database 
+credentials. Demonstrate how you would create this file if it doesnt already exist, 
+then open it in a text editor like vi, add the required content, and save it. What 
+commands and key sequences would you use?
+
