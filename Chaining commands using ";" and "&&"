@@ -1,0 +1,6 @@
+You need to run a series of maintenance tasks on a Linux server: first create a backup 
+of a directory, then delete old temporary files, and finally print a summary of disk usage.
+Explain how you would chain commands together using ; or && so that they run one after 
+another. For example, how would you write a single command line to run tar to create a 
+backup, rm to clear old temp files, and df -h to diplay disk usage? Discuss the differences
+between using ; and && in this scenario.
