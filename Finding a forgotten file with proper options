@@ -1,0 +1,7 @@
+A coworker claims that the file server_status.sh would be somewhere under /opt/scripts/ 
+but neither of you can remember its last location. Explain how you would use the find 
+command to locat this file. What options would you include to ensure that the search 
+runs effieciently, and how would you interpret the results to navigate to the found 
+file's directory?
+
+
