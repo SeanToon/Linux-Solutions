@@ -1,0 +1,5 @@
+You need to quickly determine the location of the nginx configuration file on a server
+youve just inherited. The servers updatedb database is current. Explain how you would 
+use the locate command to find all occurrences of nginx.conf on the system. How does 
+this differ from find in terms of performance and reliability?
+
