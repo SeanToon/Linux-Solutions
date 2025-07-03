@@ -4,3 +4,27 @@ credentials. Demonstrate how you would create this file if it doesnt already exi
 then open it in a text editor like vi, add the required content, and save it. What 
 commands and key sequences would you use?
 
+Steps:
+
+1. Ensure the directory exists
+    command : mkdir -p /home/projects/app/config/
+
+Explanation
+    a. Creates the directory structure /home/projects/app/config/ if it does not exist
+       ensuring there are no errors due to missing directories.
+
+2. Create and open file with vi
+    command : vi /home/projects/app/config/app.confExplanation 
+
+Explanation
+    a. Opens app.conf for editing in the vi editor. If the file doesnt exists, it is
+       created automatically.
+
+3. Press i to enter insert mode and enter database credentials.
+    command : (content to enter) 
+        DB_HOST = localhost 
+        DB_USER = root
+        DB_PASS = secretpassword
+
+        press esc to exit insert mode
+        Save and exit with : :wq!
