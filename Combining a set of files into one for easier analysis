@@ -6,3 +6,32 @@ concatenate the files using a linux command then use the split command to break 
 file into multiple parts. How would you name these smaller pieces, and how would the 
 recipient recombine them?
 
+
+Steps: 
+
+1. Concatenate the daily CSV files into one
+    command : cat sales-202401*.csv > all_sales_202401.csv
+
+Explanation
+    a. cat : reads and combines the content of files
+    b. cat sales-202401* : wildcard matches similar files
+    c. > : redirects output to new file
+
+2. Split the combined file into 100MB chunks 
+    command : split -b 100M all_sales_202401.csv all_sales_chunk_ 
+
+Explanation
+    a. split : command to divide files into smaller pieces
+    b. -b 100M : specifies chunk size as 100MB
+    c. all_sales_202401.csv : source file to split
+    d. all_sales_chunk_: Prefix for generated files (all_sales_chunk_aa, all_sales_chunk_ab).
+
+3. Recombine Chunks
+    command : cat all_sales_chunk_* > all_sales_202401.csv
+
+Explanation
+    a. cat : combines files in lexicographical order. 
+    b. all_sales_chunk_* : wildcard selects all split chunks in sequence.
+    c. > : redirects output to recreate the original file
+
+note : this is the suitable method for low bandwidth requirements!
