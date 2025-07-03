@@ -4,4 +4,19 @@ command to locat this file. What options would you include to ensure that the se
 runs effieciently, and how would you interpret the results to navigate to the found 
 file's directory?
 
+Steps
 
+1. Locate the file 
+    command : find /opt/scripts/ -type f - name "server_status.sh"
+
+Explanation:
+    /opt/scripts/ as the directory to search.
+    -type f to limit the search files
+    -name "server_status.sh" to match the file name exactly.
+
+For efficiency:
+    Add -maxdepth to limit the recursion depth
+    Use -iname for case-insensitive searches
+    Use -exec to process results, e.g., print paths or navigate directly. 
+    Interpret the output as absolute paths to locate and navigate to the directory 
+    using cd or ls. 
