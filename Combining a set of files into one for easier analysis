@@ -1,0 +1,8 @@
+You have a set of daily CSV files named sales-20240101.csv, sales-20240102.csv, and so on
+that you want to combine into a single file all_sales_202401.csv for easier analysis. After
+combining them into one large file, you need to split this large file into smaller 100MB
+chunks to upload to a remote server with limited bandwidth. Explain how you would first 
+concatenate the files using a linux command then use the split command to break the large
+file into multiple parts. How would you name these smaller pieces, and how would the 
+recipient recombine them?
+
