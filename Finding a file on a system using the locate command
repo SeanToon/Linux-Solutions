@@ -3,3 +3,15 @@ youve just inherited. The servers updatedb database is current. Explain how you 
 use the locate command to find all occurrences of nginx.conf on the system. How does 
 this differ from find in terms of performance and reliability?
 
+Steps:
+
+1. Locate the nginx.conf file using the locate command
+    command : locate nginx.conf
+
+Explanation
+    a. The locate command is faster than find because it relies on a pre-built index 
+       of the filesystem created by the updatedb command. However, its results might    
+       be outdated if the database hasnt been updated recently, while find searches 
+       the filesystem in real-time, ensuring reliablility but at a slower speed.
+
+Note: important to update "updatedb" before using locate command. 
