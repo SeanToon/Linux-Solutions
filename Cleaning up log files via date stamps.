@@ -1,0 +1,18 @@
+You need to clean up log files from a directory that contain date stamps in their names,
+such as access_log_20240101, access_log)20240102, and so on. How would you use wildcards 
+to quickly list and remove only the logs that are older than a certain date?
+Provide examples of the commmands and explain the pattern matching.
+
+Steps:
+
+1. Use the find command with the -name option for pattern matching.
+    command : find /path/to/logs -type f -name "access_log_*" -mtime +30 -exec rm -f {} \;
+
+Explanation
+    a. find /path/to/logs : specifies the directory where logs are located. 
+    b. -type f: Filters to include only files (not directories)
+    c. -name "access_log_*": matches files with names starting with access_log_ followed 
+        by any characters (*)
+    d. -mtime +30 : selects files modified more than 30 days ago.
+    e. -exec rm -f {} \; : executes rm -f to force-delete each matched file ({} is replaced
+        with the filename).
