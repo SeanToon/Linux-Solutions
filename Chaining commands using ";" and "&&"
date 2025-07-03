@@ -4,3 +4,21 @@ Explain how you would chain commands together using ; or && so that they run one
 another. For example, how would you write a single command line to run tar to create a 
 backup, rm to clear old temp files, and df -h to diplay disk usage? Discuss the differences
 between using ; and && in this scenario.
+
+Steps: 
+
+1. Using ; 
+    command : tar -czf backup.tar.gz /path/to/directory ; rm -rf /tmp/* ; df -h
+
+Explanation
+    a. tar -czf backup.tar.gz /path/to/directory : creates compressed backup 
+    b. ; : seperates commands without dependency; next command runs regardless of success
+       or failure.
+    c. rm -rf /tmp/* : Recursively deletes all files in the /tmp directory. 
+    d. df -h : displays human - readable disk usage summary.
+
+2. Using &&
+    commmand : tar -czf backup.tar.gz /path/to/directory && rm -rf /tmp/* && df -h
+
+Explanation 
+    a. same as before but with && each command only runs if the preceding one succeeds.
