@@ -3,3 +3,33 @@ You are currently in /home/projects/app/src/utils/ and you need to create a new 
 named logs inside /home/projects/app/data/. Compare how you would do this using an 
 absolute path and then using a relative path. Which approach would you prefer if you 
 frequently navigate between these directories, and why?
+
+Steps:
+
+Absolue Path 
+    command : mkdir /home/projects/app/data/logs
+
+Explanation
+    a. mkdir is the command to create a new directory. 
+    b. /home/projects/app/data/logs specifies the full path from the root of the file 
+       system to the new logs directory. 
+    c. This approach is clear and reliable because it always points to the exact directory
+       regardless of current working directory.
+
+Relative Path
+    command : mkdir ../../data/logs
+
+Explanation 
+    a. mkdir is used to create the directory.
+    b. ../ moves up one directory level. ../../ moves up two levels from 
+       /home/projects/app/src/utils/, bringing you to /home/projects/app/.
+    c. /data/logs specifies the relative path from /home/projects/app/ to the desired 
+       location. 
+    d. this approach is shorter and works well if youre working directly within the 
+       /src/utils/ directory. 
+
+In summary:
+
+Abosulte path is clear and avoids confusion, epecially in shared environments or scripts.
+Relative Path is convient for frequent navigations in a personal workflow, provided
+the directory structure is understood. 
