@@ -1,1 +1,5 @@
-You are collaborating with other developers on a project stored in /home/projects/app/. You are currently in /home/projects/app/src/utils/ and you need to create a new directory named logs inside /home/projects/app/data/. Compare how you would do this using an absolute path and then using a relative path. Which approach would you prefer if you frequently navigate between these directories, and why?
+You are collaborating with other developers on a project stored in /home/projects/app/. 
+You are currently in /home/projects/app/src/utils/ and you need to create a new directory 
+named logs inside /home/projects/app/data/. Compare how you would do this using an 
+absolute path and then using a relative path. Which approach would you prefer if you 
+frequently navigate between these directories, and why?
