@@ -1,0 +1,6 @@
+Your web server configuration file /etc/nginx/nginx.conf has a syntax error causing the
+server to fail on restart. Explain how you would open and edit this file using the vi 
+editor. Detail the steps for navigating to the specific line containing the error, making 
+the correction, saving your changes, and quitting vi. What commands would you use during 
+the editing process?
+
