@@ -3,3 +3,14 @@ You are unsure of the correct command option to achieve your goal. Describe how 
 man grep, grep --help or info grep to find the proper syntax. Explain the difference between
 these help resources and how you'd navigate the manual pages to find the right option.
 
+Explanations:
+
+1. man grep 
+  a. opens a detailed manual page with syntax, options and examples.
+
+2. grep --help
+  a. provides a quick summary of options directly in the terminal.
+
+3. info grep 
+  a. offers a detailed, hierarchical guide with hyperlinks for navigation. 
+
