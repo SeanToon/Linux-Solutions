@@ -1,0 +1,19 @@
+A configuration file /etc/app/secure.conf must be accessible by the admin group for reading,
+but should not be read by general users. The file's current permissions dont allow for 
+this delicate seperation. Demonstrate how you would use setfacl to grant read access to the 
+admin group specifically, while leaving the files primary ownership and permissions intact.
+Show the commands to set and verify ACLs.
+
+Steps:
+
+1. Grant read access to the admin group using ACLs
+    command : setfacl -m g:admin:r /etc/app/secure.conf
+
+2. Verify the ACL 
+    command : getfacl /etc/app/secure.conf
+
+Explanation:
+    a. setfacl : modifies the ACL of a file
+    b. -m : option to specify modification mode
+    c. g:admin:r : adds read (r) permission for the group admin to target file.
+    d. getfacl : displays ACL for a file
