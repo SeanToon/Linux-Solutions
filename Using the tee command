@@ -1,0 +1,17 @@
+Your manager wants you to show the output of a lengthy script run, but you also need to 
+monitor the script's progress in real-time. Explain how you would use the tee command to
+display the scripts output on the screen while simultaneously writing it to a file named 
+script_output.log. Provide the command and discuss a scenario where this might be useful, 
+such as during a production deployment. 
+
+Steps:
+
+1. Display the ouput of lengthy script on the screen while writing it to a file
+    command : ./your_script.sh | tee script_output.log
+
+Explanation:
+  a. ./your_script.sh : executes the script named your_script.sh
+  b. | : pipe operator sends the output of ./your_script.sh as input to the next command
+  c. tee : splits the input into two streams 
+      - displays output on terminal for real-time monitoring
+      - writes the output to file for later review
