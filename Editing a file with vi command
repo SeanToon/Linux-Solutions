@@ -4,3 +4,19 @@ editor. Detail the steps for navigating to the specific line containing the erro
 the correction, saving your changes, and quitting vi. What commands would you use during 
 the editing process?
 
+Steps: 
+
+1. Use the vi command 
+    command : sudo vi /etc/nginx/nginx.conf
+
+2. Search for keywords and navigate to the error line
+    command : /
+
+3. Quit and save if needed
+    command : :q to quit and wq! to quit and save
+
+4. Validate syntax
+    command : nginx -t
+
+5. After successful test, restart Nginx 
+    command : sudo systemctl restart nginx
