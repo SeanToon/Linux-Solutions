@@ -1,0 +1,20 @@
+You have recently taken over a project folder /var/www/project that was previously 
+maintained by another user. To ensure the new developer group webdev can manage these 
+files going forward, you need to transfer ownership of all files from olduser to newuser
+and assign the group to webdev. Describe the steps and commands (chown, chgrp) you would
+use to achieve this. How would you confirm the changes?
+
+Steps: 
+
+1. Change ownership
+    command : sudo chown -R webdev /var/www/project
+
+2. Change group ownership
+    command : sudo chgrp -R webdev /var/www/project
+
+3. Confirm ownership changes:
+    command : ls -l /var/www/project
+
+Explanation
+    a. -R option in both commands : ensures recursive application to all files/subdirectories 
+    b. -l option displays detailed file info, including owner and group
