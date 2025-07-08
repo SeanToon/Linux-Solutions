@@ -3,3 +3,15 @@ privileges. You currently have a non-privileged user account. Explain how you wo
 sudo to run the patch command with elevated privileges. Also, contrast using sudo versus 
 su - in terms of security, auditability, and best practices.
 
+Steps: 
+
+1. Ensure your user is in the sudoers group by checking with groups <username>.
+    command : groups <username>
+
+2. run patch installer 
+    command : sudo <patch_command>
+    
+Explanation
+    a. unlike su -, sudo provides temporary privilege escalation for a specific 
+      command, improving security by limiting full root access and enabling command 
+      auditability in logs, which aligns with best practices for minimizing risks. 
