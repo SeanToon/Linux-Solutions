@@ -1,0 +1,5 @@
+You are trying to use the grep command to filter log entries but keep receiving a synta error.
+You are unsure of the correct command option to achieve your goal. Describe how you would use 
+man grep, grep --help or info grep to find the proper syntax. Explain the difference between
+these help resources and how you'd navigate the manual pages to find the right option.
+
