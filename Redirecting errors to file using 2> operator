@@ -1,0 +1,15 @@
+You run a script ./deploy.sh to update your application, but it is failing silently. You
+suspect errors are being printed to stderr. Describe how you would direct stderr to a file
+named error_log.txt without affecting the normal script output. Provide the command and 
+explain the purpose of 2> in this scenario. 
+
+Steps:
+
+1. Redirect stderr to a file named error_log.txt while keeping the normal script output
+    unaffected.
+    command : ./deploy.sh 2> error_log.txt
+
+Explanation:
+  a. ./deploy.sh : runs script deploy.sh from the current directory
+  b. 2> : redirects stderr, identified by file descriptor 2 (standard error)
+  c. error_log.txt : specifies destination file
