@@ -1,0 +1,31 @@
+Your team has a shared directory /reports on a production server, and all team members 
+need the ability to read and write files in it. Currently, only the owner can write to
+this directory. Explain how you would use chmod with either symbolic (e.g., u,g,o,+,-)
+or numeric modes(e.g., 775) to ensure that the owner and group have write permissions,
+while others can only read. Show the exact commands and verify the changes using ls -l.
+
+1. Ensure the owner and group have write permissions while others can only read
+    command : chmod 775 /reports
+
+2. Verify changes 
+    command : ls -ld /reports
+
+  0 - no permissions 
+  1 - only execute
+  2 - only write
+  3 - write and execute 
+  4 - only read 
+  5 - read and execute
+  6 - read and write
+  7 - read, write, and execute
+
+  uga
+
+  u - user
+  g - group
+  a - all (others)
+
+  Explanation:
+    a. ls : lists the directory contents
+    b. -l : displays detailed information, including permissions
+    c. -d : ensures only the directory's information is shown, not its contents.
