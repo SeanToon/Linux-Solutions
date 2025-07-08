@@ -1,0 +1,36 @@
+You have a new project starting, and five developers need accounts on the production server.
+Explain how you would use useradd to create these accounts, assign them to a newly created 
+devteam group using groupadd, and then set initial passwords. How would you confirm the 
+accounts are set up correctly and ensure that the users have the appropriate default shells 
+and home directories?
+
+Steps: 
+
+1. Create the group devteam
+    command : groupadd devteam
+
+2. Add users, create account, assign to group, create home directories, and set default shell
+    command : useradd -m -g devteam -s /bin/bash username
+
+3. Set initial passwords
+    command : passwd username
+
+4. Verify setup 
+    command : id username
+
+5. Confirm home directories
+    command : ls -ld /home/username
+
+6. Verify shell settings
+    command : grep username /etc/passwd
+
+7. Ensure appropriate permissions
+    command :chmod
+
+Explanation: 
+
+  a. useradd -m -g devteam -s /bin/bash username 
+      - -m : ensures home directory is created for the user
+      - -g devteam : assigns the user to the devteam group as their primary group
+      - -s /bin/bash : sets default shell to Bash
+      - username : placeholder for developers username
