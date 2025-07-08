@@ -1,0 +1,5 @@
+You need to apply a security patch to the system, but the patch installer requires root 
+privileges. You currently have a non-privileged user account. Explain how you would use 
+sudo to run the patch command with elevated privileges. Also, contrast using sudo versus 
+su - in terms of security, auditability, and best practices.
+
