@@ -1,0 +1,15 @@
+You want to search a large Apache log file for all GET requests on /api/v2/data and then 
+count how many results you find. Show how you would combine grep with wc -l using a 
+pipe to accomplish this. Explain the logic behind piping commands nad how this approach saves 
+time compared to manually counting lines. 
+
+Steps:
+
+1. Search large log file for all GET commands 
+    command : grep "GET /api/v2/data" apache_log_file.log | wc -l
+
+Explanation:
+  a. grep : outlines matching lines for all GET /api/v2/data in apache_log_file.log
+  b. | : passes output of the grep command as input to next command
+  c. wc -l : counts number of lines receieved from grep output, outputs total count 
+      of matching requests.
