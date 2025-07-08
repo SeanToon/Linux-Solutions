@@ -1,0 +1,21 @@
+Your application has generated a log file with thousands of entries containing the old 
+domain name oldsite.com, which needs to be replaced with newsite.com before you foward the
+logs to a third party. Describe how you would use sed to perfom this find-and-replace operation 
+directly on the file. Explain the command syntax, what each part means, and how you would 
+verify the change without manually inspecting every line. 
+
+Steps: 
+
+1. Replace all instances of oldsite.com with newsite.com in a log file using the sed command
+    command : sed -i 's/oldsite\.com/newsite\.com/g' logfile.log
+
+Explanation
+    a. sed command is useful for editing the file in place to make sure that no additional
+       copies are created. (especially useful for large files)
+    b. -i, edits file in place, directly modifying logfile.log
+    c. for " s/oldsite\.com/newsite\.com/g' "
+          - s : is the substitution command
+          - oldsite\.com : the search pattern ( dot escaped to treat it as literal).
+          - newsite\.com : the replacement text
+          - g : global flag to replace all occurances in each line
+          - logfile.log : target file containing logs
