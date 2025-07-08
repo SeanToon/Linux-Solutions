@@ -1,0 +1,15 @@
+Your supervisor asks you to append a new string to the /etc/app/settings/conf file. This
+setting is just a single line of text. How would you use output redirection (>>) to add
+the line max_connections=100 to the end of this file? Show the exact command and explain
+the difference between using > and >> in this context.
+
+Steps:
+
+1. Append the setting to the end of the file using the >> operator
+    command : echo "max_connections=100" >> /etc/app/settings.conf
+
+Explanation:
+
+1. The >> operator is used to append without overwriting
+2. The > operator is used to overwrite
+3. echo command here is only used to provide the content we want to append
